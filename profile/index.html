@@ -7,150 +7,160 @@
     <meta name="author" content="Bagas Wanson">
     <meta name="description" content="Personal profile page of Bagas Wanson">
     <title>Profile - Bagas Wanson</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/content.css">
+
 </head>
 
 <body>
-    <!-- Header start -->
-    <header>
-        <nav id="main-nav" aria-label="Main navigation for page">
-            <ul class="nav_list">
-                <li class="nav_item"><a href="#" class="nav_link">Profile</a></li>
-                <li class="nav_item"><a href="../portfolio/index.html" class="nav_link">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Header end -->
+    <div class="container">
+        <!-- Navigations start -->
+        <div class="nav">
 
-    <!-- Aside start -->
-    <aside>
-        <nav id="second_nav" aria-label="Secondary navigation for section">
-            <ul class="nav_list">
-                <li class="nav_item"><a href="#hero" class="nav_link">Home</a></li>
-                <li class="nav_item"><a href="#about" class="nav_link">About Me</a></li>
-                <li class="nav_item"><a href="#reason" class="nav_link">Reason become SE</a></li>
-                <li class="nav_item"><a href="#learn" class="nav_link">What and Why I learning</a></li>
-                <li class="nav_item"><a href="#contact" class="nav_link">Contact Me</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <!-- Aside end -->
+            <!-- Nav Toggle start -->
+            <label aria-label="nav toggle" class="nav-toggle">
+                <input class="nav-toggle__bar" type="checkbox">
+            </label>
+            <!-- Nav Toggle end -->
 
-    <!-- Main start -->
-    <main>
-        <!-- Hero start -->
-        <section id="hero">
-            <h1 class="title">Hello there! My Name is Bagas Wanson</h1>
-            <p class="paragraph">Aspiring Software Engineer | Fulltime Learner</p>
-            <div class="profile_container"></div>
-            <img class="profile_img" width="200"
-                src="https://i.pinimg.com/736x/67/a4/c5/67a4c56d3833ff5a78ecef3d3fe50341.jpg"
-                alt="Anime character Lelouce VI Britania">
-        </section>
-        <!-- Hero end -->
+            <!-- Header start -->
+            <header class="header">
+                <nav class="nav-main" aria-label="Main navigation for page">
+                    <ul class="nav-main__list">
+                        <li class="nav-main__item active"><a href="#" class="nav-main__link sm-frame active">Profile</a>
+                        </li>
+                        <li class="nav-main__item"><a href="../portfolio/index.html"
+                                class="nav-main__link sm-frame">Portfolio</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Header end -->
 
-        <!-- About start -->
-        <section id="about">
-            <h2 class="sub_title">About Me & My Philosophy</h2>
-            <p class="paragraph">I'm a Fulltime Learner and a graduate of a Vocational High School with a major in
-                Computer and Network Engineer.</p>
-            <p class="paragraph">I really like computer technology, especially in the field of software engineering,
-                because I see the impact of this field is tangible and revolutionary for aspects of our lives.</p>
-            <p class="paragraph">But that's not all. I view Software Engineering, or more accurately, Programming, as
-                something truly fantastic and amazing. With it, I can imagine myself being able to do anything I want,
-                like being in "god mode" in a video game, because I can do a series of things like:
-            </p>
-            <ul class="list_items">
-                <li class="item_list">Controlling and making everything according to the System or Logical Rules that I
-                    want.</li>
-                <li class="item_list">Building and Experimenting with something interesting and challenging.</li>
-                <li class="item_list">It challenges me to think outside the box and break the rules, but on the other
-                    hand it also teaches me to think computationally or logically.</li>
-            </ul>
-            <p class="paragraph">For me doing all these things is very satisfying and interesting.</p>
-            <figure>
-                <img width="200" src="https://i.pinimg.com/736x/67/a4/c5/67a4c56d3833ff5a78ecef3d3fe50341.jpg"
-                    alt="Anime character Lelouch vi Britannia">
-                <figcaption>This is one of the characters that influenced me the most, where I saw how he could get
-                    or realize his desires by any means, and in the end he was even willing to sacrifice himself to
-                    achieve his goal of creating a peaceful and safe world, by creating a common enemy.</figcaption>
-            </figure>
-        </section>
-        <!-- About end -->
+            <!-- Sidebar start -->
+            <aside class="sidebar">
+                <nav class="nav-side" aria-label="Sidebar or Secondary Navigation for section">
+                    <ul class="nav-side__list">
+                        <li class="nav-side__item"><a href="#hero" class="nav-side__link sm-frame">Home</a></li>
+                        <li class="nav-side__item"><a href="#about" class="nav-side__link sm-frame">About</a></li>
+                        <li class="nav-side__item"><a href="#reason" class="nav-side__link sm-frame">Reason</a></li>
+                        <li class="nav-side__item"><a href="#learn" class="nav-side__link sm-frame">Learning</a></li>
+                        <li class="nav-side__item"><a href="#socials" class="nav-side__link sm-frame">Socials</a></li>
+                        <li class="nav-side__item"><a href="#contact" class="nav-side__link sm-frame">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- Sidebar end -->
+        </div>
+        <!-- Navigations end -->
 
-        <!-- WLS start -->
-        <section id="why-learning-system">
-            <h2 class="sub_title">Why I Build Learning System</h2>
-            <p class="paragraph">I am currently working and building my own learning system which aims to make all my
-                goals achievable and solve my current problems. <br>
-                I call this System <b>Continuously Learning to Survive</b>, because human brain is created and
-                working to make human survive, therefore I think I can modified or manipulate my own brain to think in a
-                way that <b>Learning is the key to Survive</b>.
-            </p>
-            <p class="paragraph">The reason that drives me to build my own Learning System is because I see myself,
-                especially when learning something, always feel less suited, not enjoying the learning system or the
-                rules that are made, there is always a kind of feeling that I think in some part or step I can improve
-                or change the way the Learning System is done, that's why I think I will start to create My Own Learning
-                System to make me feel happy and enjoy, but also productive and have measurable results when learning.
-            </p>
-        </section>
-        <!-- WLS end -->
+        <!-- Main start -->
+        <main class="main">
+            <!-- Hero start -->
+            <section class="hero section md-frame" id="hero">
+                <div class="hero__head sm-frame">
+                    <img class="hero__head-img profile-img" src="assets/profile.jpeg"
+                        alt="Bagas Wanson profile picture">
+                </div>
+                <div class="hero-body">
+                    <h1 class="hero__body-title title">Bagas Wanson</h1>
+                    <p class="hero__body-paragraph paragraph">Aspiring Software Engineer</p>
+                </div>
+            </section>
+            <!-- Hero end -->
 
-        <!-- WSC start -->
-        <section id="why-se-career">
-            <h2 class="sub_title">Why I Choose SE as Career Path</h2>
-            <p class="paragraph">As you can see, the reason I chose Software Engineer as my career path is because of my
-                "passion" or interest, but that is not my only consideration when choosing this career or job, because I
-                see that there are pragmatic opportunities in this field because our society is now very dependent on
-                the Digital World, such as Education, Entrepreneurship, Health, Entertainment, and Others, so when I saw
-                this, I thought this was the best combination between my personal interests and the opportunities that
-                exist.
-            </p>
-        </section>
-        <!-- WSC end -->
+            <!-- About start -->
+            <section class="about section md-frame" id="about">
+                <h2 class="about__title sub-title">About Me</h2>
+                <p class="about__paragraph paragraph">
+                    I’m a vocational graduate in Computer & Network Engineering and a full-time learner passionate
+                    about
+                    software.
+                    For me, programming feels like “god mode” in a game—where I can build, control, and experiment
+                    freely while training logic and creativity.
+                </p>
+            </section>
+            <!-- About end -->
 
-        <!-- Contact start -->
-        <section id="contact">
-            <h2 class="sub_title">Contact Me</h2>
-            <div class="form_container">
-                <form action="" method="post">
-                    <fieldset>
-                        <legend>Contact Form</legend>
-                        <div>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" placeholder="Bagas Wanson" required>
+            <!-- Reason start -->
+            <section class="reason section md-frame" id="reason">
+                <h2 class="reason__title sub-title">Why I Choose SE as Career Path</h2>
+                <p class="reason__paragraph paragraph">I chose Software Engineering not only from passion, but also
+                    because it’s a
+                    field
+                    full of real opportunities in today’s digital world—education, business, health, and beyond.</p>
+            </section>
+            <!-- Reason end -->
+
+            <!-- Learning start -->
+            <section class="learn section md-frame" id="learn">
+                <h2 class="learn__title sub-title">Why I Build Learning System</h2>
+                <p class="learn__paragraph paragraph">I created my own learning system, Continuously Learning to
+                    Survive, to turn
+                    learning into both survival and joy.
+                    This system lets me adjust methods to stay productive, motivated, and measure progress.</p>
+            </section>
+            <!-- Learning end -->
+
+            <!-- Socials start -->
+            <section class="socials section md-frame" id="socials">
+                <h2 class="socials__title sub-title">My Social Accounts</h2>
+                <div class="socials__info">
+                    <p class="socials__paragraph paragraph">This is list of My Social Media accounts:</p>
+                    <ul class="socials__list sm-frame">
+                        <li class="socials__item">Github: <a class="socials__link"
+                                href="https://github.com/Bagasone">bagasone</a></li>
+                        <li class="socials__item">Email: <a class="socials__link"
+                                href="mailto:bagasonegmail.com">bagasone@gmail.com</a></li>
+                        <li class="socials__item">Instagram: <a class="socials__link"
+                                href="https://www.instagram.com/bagasaputra666/">@bagasaputra666</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Socials end -->
+
+            <!-- Contact start -->
+            <section class="contact section md-frame" id="contact">
+                <h2 class="contact__title sub-title">Contact Me</h2>
+                <form class="contact__form form sm-frame" action="" method="post">
+                    <fieldset class="contact__form-field form-field">
+                        <legend class="contact__form-fitle">Contact Form</legend>
+                        <div class="contact__form-group form-group">
+                            <label class="contact__form-label" for="name">Name:</label>
+                            <input class="contact__form-input sm-frame" type="text" id="name" name="name"
+                                placeholder="Bagas Wanson" required>
                         </div>
-                        <div>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="bagaswanson@email.com" required>
+                        <div class="contact__form-group form-group">
+                            <label class="contact__form-label" for="email">Email:</label>
+                            <input class="contact__form-input sm-frame" type="email" id="email" name="email"
+                                placeholder="bagaswanson@email.com" required>
                         </div>
-                        <div>
-                            <label for="message">Message:</label>
-                            <textarea name="message" id="message" required></textarea>
+                        <div class="contact__form-group form-group">
+                            <label class="contact__form-label" for="message">Message:</label>
+                            <textarea class="contact__form-textarea sm-frame" name="message" id="message"
+                                placeholder="Hello, nice to meet you" required></textarea>
                         </div>
-                        <p>This message is for personal communication only</p>
-                        <button type="submit">Submit Message</button>
+                        <p class="contact__form-alert">Fill the form below to reach me, or connect via my social media
+                            accounts.
+                        </p>
+                        <button class="contact__form-btn btn sm-frame" type="submit">Submit Message</button>
                     </fieldset>
                 </form>
-            </div>
-            <div class="info_container">
-                <p class="paragraph">This is list of My Social Media accounts:
-                <ul>
-                    <li>Github: <a href="https://github.com/Bagasone">Bagasone</a></li>
-                    <li>Email: <a href="mailto:bagasbagass891@gmail.com">bagasbagass891@gmail.com</a></li>
-                    <li>Instagram: <a href="https://www.instagram.com/bagasaputra666/">@bagasaputra666</a></li>
-                </ul>
-                </p>
-            </div>
-        </section>
-        <!-- Contact end -->
-    </main>
-    <!-- Main end -->
+            </section>
+            <!-- Contact end -->
+        </main>
+        <!-- Main end -->
 
-    <!-- Footer start -->
-    <footer>
-        <p class="paragraph">Created with full of 💖 by Bagas Wanson &copy; 2025</p>
-    </footer>
-    <!-- Footer end -->
+        <!-- Footer start -->
+        <footer class="footer">
+            <p class="footer__paragraph paragraph">Created with full of 💖 by Bagas Wanson &copy; 2025</p>
+        </footer>
+        <!-- Footer end -->
+    </div>
 </body>
 
 </html>
