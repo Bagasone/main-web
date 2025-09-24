@@ -1,0 +1,688 @@
+/* Main */
+.main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3xl);
+}
+
+/* Hero section */
+.hero {
+    --space-gap: calc(var(--size-3xl) + 1vh);
+}
+
+.hero .profile {
+    gap: var(--space-gap);
+}
+
+.hero .profile__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .profile__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .profile__name {
+    font-size: calc(var(--size-4xl) + 1.5vh);
+    line-height: calc(var(--size-4xl) + 1vh);
+    margin-top: calc(var(--size-base) * -1);
+
+    text-transform: uppercase;
+}
+
+.hero .profile__role {
+    font-size: var(--size-lg);
+    font-weight: 400;
+
+    align-self: self-start;
+
+    height: var(--size-lg);
+    margin: var(--space-gap) 0;
+}
+
+.hero .btn {
+    align-self: flex-start;
+}
+
+/* About section */
+.about .highlights {
+    list-style: disc;
+    padding-left: var(--space-sm);
+}
+
+.about .bio-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .bio-data {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.about .bio-data span {
+    width: var(--size-5xl);
+    margin-right: var(--space-sm);
+}
+
+/* Skills section */
+.skills .card__container {
+    gap: var(--space-sm);
+}
+
+.skills .card__head {
+    justify-content: space-between;
+
+    height: max-content;
+}
+
+.skills .card__status {
+    position: absolute;
+    right: var(--space-xxs);
+    top: var(--space-xxs);
+
+    box-shadow: var(--shadow-sm);
+}
+
+/* Projects section */
+.projects .card__container {
+    gap: var(--space-md);
+}
+
+.projects .card {
+    padding: 0;
+}
+
+.projects .card__body {
+    flex-direction: column;
+    padding: var(--size-sm);
+}
+
+.projects .card__status {
+    position: absolute;
+    right: var(--space-xxs);
+    top: var(--space-xxs);
+
+    box-shadow: var(--shadow);
+}
+
+/* Certificates section */
+.certificates .card__container {
+    gap: var(--size-xl);
+}
+
+.certificates .card__head {
+    justify-content: space-between
+}
+
+.certificates .card__years {
+    font-weight: 500;
+    font-size: var(--size-lg);
+}
+
+.certificates .card__body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spae-sm);
+}
+
+.certificates .card__logo {
+    width: calc(var(--size-6xl) + 30%);
+    height: calc(var(--size-6xl) + 30%);
+
+    padding: var(--space-xs);
+
+    background-color: var(--color-bg);
+    fill: var(--color-text);
+}
+
+.certificates .card__desc {
+    text-align: center;
+}
+
+/* Contact section */
+/* Contact */
+.contact__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+/* Contact list */
+.contact__item {
+    display: grid;
+    grid-template-columns: var(--size-6xl) 1fr;
+}
+
+.contact__icon {
+    width: var(--size-5xl);
+    height: var(--size-4xl);
+    padding: var(--space-sm);
+
+    font-size: var(--size-3xl);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .info-data {
+    font-weight: 400;
+}
+
+.contact .list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-base);
+}
+
+.contact .item {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: var(--size-base);
+
+}
+
+.contact .item i {
+    width: var(--size-6xl);
+    height: var(--size-6xl);
+    padding: var(--space-sm);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: var(--size-4xl);
+
+    background-color: var(--color-surface);
+}
+
+.contact .item__info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact form */
+.contact .form {
+    background-color: var(--color-surface);
+    padding: var(--space-sm) var(--space-md);
+}
+
+.contact .field {
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.contact .form__title {
+    font-size: var(--size-xl);
+    font-weight: 500;
+
+    margin-bottom: var(--space-xs)
+}
+
+.contact .label {
+    font-weight: 400;
+}
+
+.contact .input,
+.contact .textarea {
+    padding: var(--size-xxs) var(--space-sm);
+
+    width: 100%;
+}
+
+
+/* Mobile (Normal) */
+@media screen and (min-width: 478px) {
+
+    /* Hero section */
+    .hero .profile__img {
+        padding: 0 var(--size-2xl);
+    }
+
+    .hero .profile__name {
+        font-size: calc(var(--size-5xl) + 1.5vh);
+        line-height: calc(var(--size-5xl) + 1vh);
+    }
+
+    .hero .profile__role {
+        font-size: var(--size-xl);
+
+        height: var(--size-xl);
+    }
+
+    .hero .profile__desc {
+        font-size: var(--size-lg);
+    }
+
+    /* About section */
+    .about .highlights {
+        padding-left: var(--space-md);
+    }
+
+    .about .bio-data span {
+        width: var(--size-6xl);
+        margin-right: var(--space-md);
+    }
+
+    /* Skills section */
+    .skills .card__container {
+        gap: var(--space-md);
+    }
+
+    .skills .card__status {
+        right: var(--space-xs);
+        top: var(--space-xs);
+    }
+
+    /* Projects section */
+    .projects .card__container {
+        gap: var(--space-lg);
+    }
+
+    .projects .card__body {
+        padding: var(--size-sm) var(--space-md);
+    }
+
+    .projects .card__status {
+        right: var(--space-xs);
+        top: var(--space-xs);
+    }
+
+    /* Certificates section */
+    .certificates .card__container {
+        gap: var(--size-2xl);
+    }
+
+    .certificates .card__years {
+        font-size: var(--size-xl);
+    }
+
+    .certificates .card__body {
+        gap: var(--spae-md);
+    }
+
+    .certificates .card__logo {
+        width: calc(var(--size-7xl) + 30%);
+        height: calc(var(--size-7xl) + 30%);
+
+        padding: var(--space-sm);
+    }
+
+    /* Contact section */
+    /* Contact list */
+    .contact__item {
+        grid-template-columns: var(--size-7xl) 1fr;
+    }
+
+    .contact__icon {
+        width: var(--size-6xl);
+        height: var(--size-5xl);
+        padding: var(--space-md);
+
+        font-size: var(--size-4xl);
+    }
+
+    .contact .list {
+        gap: var(--size-lg);
+    }
+
+    .contact .item {
+        gap: var(--size-lg);
+
+        font-size: var(--size-lg);
+    }
+
+    .contact .item i {
+        width: var(--size-7xl);
+        height: var(--size-7xl);
+        padding: var(--space-md);
+
+        font-size: var(--size-5xl);
+    }
+
+    /* Contact form */
+    .contact .form {
+        padding: var(--space-md);
+    }
+
+    .contact .field {
+        gap: var(--space-md);
+    }
+
+    .contact .label {
+        font-size: var(--size-lg);
+    }
+
+    .contact .input,
+    .contact .textarea {
+        font-size: var(--size-lg);
+    }
+}
+
+/* Mobile (Large) */
+@media screen and (min-width: 578px) {
+
+    /* Main */
+    .main {
+        gap: var(--size-4xl);
+    }
+
+    /* Hero section */
+    .hero {
+        --space-gap: calc(var(--size-4xl) + 1vh);
+    }
+
+    .hero .profile__img {
+        padding: var(--size-3xl);
+    }
+
+    .hero .profile__name {
+        font-size: calc(var(--size-6xl) + 1.5vh);
+        line-height: calc(var(--size-6xl) + 1vh);
+        margin-top: calc(var(--size-lg) * -1);
+    }
+
+    .hero .profile__role {
+        font-size: var(--size-2xl);
+
+        height: var(--size-2xl);
+    }
+
+    .hero .profile__desc {
+        font-size: var(--size-xl);
+    }
+
+    /* Certificates section */
+    .certificates .card__years {
+        font-size: var(--size-2xl);
+    }
+
+    .certificates .card__logo {
+        width: calc(var(--size-8xl) + 30%);
+        height: calc(var(--size-8xl) + 30%);
+    }
+
+    /* Contact section */
+    /* Contact */
+    .contact .item {
+        font-size: var(--size-xl);
+    }
+
+    /* Contact form */
+    .contact .form {
+        padding: var(--space-md);
+    }
+
+    .contact .field {
+        gap: var(--space-sm);
+    }
+
+    .contact .form__title {
+        font-size: var(--size-2xl);
+    }
+
+    .contact .label {
+        font-size: var(--size-xl);
+    }
+
+    .contact .input,
+    .contact .textarea {
+        font-size: var(--size-xl);
+        padding: var(--space-xs) var(--space-sm);
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+    /* Main */
+    .main {
+        gap: var(--size-3xl);
+
+        padding: 0 var(--size-4xl);
+    }
+
+    /* Hero section */
+    .hero {
+        --space-gap: calc(var(--size-3xl) + 1vh);
+    }
+
+    .hero .profile__img {
+        padding: 0 var(--size-4xl);
+    }
+
+    .hero .profile__name {
+        font-size: calc(var(--size-7xl) + 1.5vh);
+        line-height: calc(var(--size-6xl) + 1vh);
+        margin-top: calc(var(--size-base) * -1);
+    }
+
+    /* Certificates section */
+    .certificates .card__years {
+        font-size: var(--size-xl);
+    }
+
+    .certificates .card__logo {
+        width: calc(var(--size-7xl) + 30%);
+        height: calc(var(--size-7xl) + 30%);
+    }
+
+    /* Contact section */
+    /* Contact form */
+
+    .contact .field {
+        gap: var(--space-md);
+    }
+
+    .contact .label {
+        font-size: var(--size-lg);
+    }
+
+    .contact .input,
+    .contact .textarea {
+        font-size: var(--size-lg);
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+
+    /* Main */
+    .main {
+        gap: var(--size-4xl);
+        padding: 0;
+    }
+
+    /* Hero section */
+    .hero {
+        --space-gap: calc(var(--size-4xl) + 1vh);
+    }
+
+    .hero .profile {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr max-content;
+
+        gap: var(--size-sm);
+    }
+
+    .hero .profile__img {
+        padding: 0 var(--size-4xl);
+
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .hero .profile__detail {
+        align-items: start;
+    }
+
+    .hero .profile__name {
+        font-size: calc(var(--size-5xl) + 1.5vh);
+        line-height: calc(var(--size-5xl) + 1vh);
+
+        margin: 0;
+        margin-top: var(--size-base);
+
+        align-items: start;
+    }
+
+    .hero .profile__role {
+        font-size: var(--size-lg);
+        height: var(--size-lg);
+
+        margin: var(--size-2xl) 0;
+    }
+
+    .hero .profile__desc {
+        font-size: var(--size-base);
+    }
+
+    .hero .btn-project {
+        font-size: var(--size-lg);
+
+        width: max-content;
+    }
+
+    /* About section */
+    .about .bio-data span {
+        width: var(--size-5xl);
+        margin-right: var(--space-md);
+    }
+
+    /* Projects section */
+    .projects .card__head {
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .projects .card__head img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Certificates section */
+    .certificates .card__container {
+        gap: var(--size-3xl);
+    }
+
+    /* Contact section */
+    /* Contact form */
+    .contact .form__title {
+        font-size: var(--size-2xl);
+    }
+
+}
+
+/* Desktop) */
+@media screen and (min-width: 1280px) {
+
+    /* Main */
+    .main {
+        gap: var(--size-6xl);
+
+        padding: var(--size-2xl) var(--size-4xl);
+    }
+
+    /* Hero section */
+    .hero {
+        --space-gap: calc(var(--size-5xl) + 1vh);
+    }
+
+    .hero .profile {
+        gap: var(--size-2xl);
+    }
+
+    .hero .profile__detail {
+        justify-content: space-evenly;
+    }
+
+    .hero .profile__img {
+        padding: 0 var(--size-2xl);
+    }
+
+    .hero .profile__name {
+        font-size: calc(var(--size-6xl) + 1.5vh);
+        line-height: calc(var(--size-6xl) + 1vh);
+    }
+
+    .hero .profile__role {
+        font-size: var(--size-2xl);
+        height: var(--size-xl);
+
+        margin: var(--size-4xl) 0;
+    }
+
+    .hero .profile__desc {
+        font-size: var(--size-lg);
+    }
+
+    .hero .btn-project {
+        font-size: var(--size-xl);
+    }
+
+    /* Certificates section */
+    .certificates .card__container {
+        gap: var(--size-4xl);
+    }
+
+    .certificates .card__years {
+        font-size: var(--size-2xl);
+    }
+
+    .certificates .card__body {
+        gap: var(--spae-lg);
+    }
+
+    .certificates .card__logo {
+        width: calc(var(--size-7xl) + 35%);
+        height: calc(var(--size-7xl) + 35%);
+    }
+
+    /* Contact section */
+    /* Contact */
+    .contact__list {
+        gap: calc(var(--space-xl) + 1vh);
+    }
+
+    /* Contact list */
+    .contact .list {
+        gap: var(--size-xl);
+    }
+
+    .contact .item {
+        gap: var(--size-lg);
+
+        font-size: var(--size-lg);
+    }
+
+    /* Contact form */
+    .contact .form {
+        padding: var(--space-lg);
+    }
+
+    .contact .form__title {
+        font-size: var(--size-3xl);
+    }
+
+    .contact .label {
+        font-size: var(--size-xl);
+    }
+
+    .contact .input,
+    .contact .textarea {
+        font-size: var(--size-xl);
+    }
+}

@@ -1,0 +1,75 @@
+.hamburger {
+    width: max-content;
+    height: var(--size-4xl);
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: relative;
+    background-color: var(--color-bg);
+
+    cursor: pointer;
+}
+
+
+.hamburger::before,
+.hamburger input,
+.hamburger::after {
+    content: "";
+    width: calc(var(--size-3xl) + 1vw);
+    height: 3px;
+
+    border-radius: var(--size-base);
+    border: none;
+
+    display: inline-block;
+
+    background-color: var(--color-text);
+    box-shadow: var(--shadow-sm);
+
+    cursor: pointer;
+}
+
+.hamburger input {
+    appearance: none;
+}
+
+/* Mobile (Normal) */
+@media screen and (min-width: 478px) {
+    .hamburger {
+        height: var(--size-4xl);
+    }
+
+    .hamburger::before,
+    .hamburger input,
+    .hamburger::after {
+        width: calc(var(--size-4xl) + 1vw);
+        height: 3.5px;
+    }
+}
+
+/* Mobile (Large) */
+@media screen and (min-width: 578px) {
+    .hamburger {
+        height: var(--size-5xl);
+    }
+
+    .hamburger::before,
+    .hamburger input,
+    .hamburger::after {
+        width: calc(var(--size-5xl) + 1vw);
+        height: 4px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {}
+
+/* Desktop) */
+@media screen and (min-width: 1280px) {}

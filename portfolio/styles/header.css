@@ -1,0 +1,353 @@
+.header {
+    width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+    position: fixed;
+    right: calc(var(--size-xs) + 1vw);
+    top: calc(var(--size-xs) + 1vw);
+}
+
+.hamburger:has(input:checked)~.sidebar {
+    left: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    --space-sm: var(--size-xxs);
+    --space-md: var(--size-lg);
+    --space-lg: var(--size-xl);
+
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+
+    width: calc(var(--size-10xl) + 20%);
+    height: 100%;
+    padding: var(--space-sm) 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--space-sm);
+
+    background-color: var(--color-surface);
+    transition: left .3s ease-in;
+    z-index: 99999;
+    /* overflow: hidden; */
+}
+
+/* Sidebar - Profile */
+.sidebar .profile__img {
+    padding: 0 var(--space-lg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .profile__img img {
+    width: calc(55% + var(--size-5xl));
+}
+
+.sidebar .profile__name {
+    font-size: calc(var(--size-4xl) + 1vh);
+    line-height: calc(var(--size-4xl) + .5vh);
+
+    margin: var(--space-sm);
+}
+
+.sidebar .profile__role {
+    font-size: calc(var(--size-base) + .5vh);
+
+    height: calc(var(--size-base) + .5vh);
+
+    color: var(--color-accent-alt);
+}
+
+/* Sidebar - Link */
+.sidebar__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 calc(var(--space-sm) + 1vh);
+}
+
+.sidebar__link i {
+    font-size: calc(var(--size-lg) + 1vh);
+
+    transition: .3s ease;
+}
+
+.sidebar__link i:hover {
+    color: var(--color-accent-alt);
+}
+
+/* Sidebar - Nav */
+.sidebar .nav {
+    width: 100%;
+}
+
+.sidebar .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar .nav__item {
+    font-size: var(--size-lg);
+    padding: calc(var(--space-xs) + .5vh) calc(var(--space-md) + .5vh);
+}
+
+.sidebar .nav__link {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.sidebar .nav__link i {
+    font-size: calc(var(--size-base) + .5vh);
+}
+
+/* Sidebar - Button */
+.sidebar .btn-container {
+    padding: 0 var(--space-md);
+}
+
+.sidebar .btn {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-sm);
+}
+
+.sidebar .btn i {
+    font-size: var(--size-xl);
+}
+
+/* Mobile (Normal) */
+@media screen and (min-width: 478px) {
+
+    /* Sidebar */
+    .sidebar {
+        --space-sm: var(--size-xs);
+        --space-md: var(--size-lg);
+        --space-lg: var(--size-xl);
+    }
+
+    /* Sidebar - Profile */
+    .sidebar .profile__img img {
+        width: calc(40% + var(--size-5xl));
+    }
+
+    /* Sidebar - Link */
+    .sidebar__link {
+        padding: 0 calc(var(--space-md) + 1vh);
+    }
+
+    /* Sidebar - Nav */
+    .sidebar .nav__item {
+        padding: calc(var(--space-xs) + .5vh) calc(var(--space-lg) + .5vh);
+    }
+}
+
+/* Mobile (Large) */
+@media screen and (min-width: 578px) {
+
+    /* Hamburger */
+    .hamburger {
+        right: calc(var(--size-sm) + 1vw);
+        top: calc(var(--size-sm) + 1vw);
+    }
+
+    /* Sidebar */
+    .sidebar {
+        --space-sm: var(--size-base);
+        --space-md: var(--size-xl; );
+        --space-lg: var(--size-2xl);
+
+        width: calc(var(--size-10xl) + 30%);
+    }
+
+    /* Sidebar - Profile */
+    .sidebar .profile__img img {
+        width: calc(50% + var(--size-5xl));
+    }
+
+    .sidebar .profile__name {
+        font-size: calc(var(--size-5xl) + 1vh);
+        line-height: calc(var(--size-5xl) + .5vh);
+    }
+
+    .sidebar .profile__role {
+        font-size: calc(var(--size-lg) + .5vh);
+        height: calc(var(--size-lg) + .5vh);
+    }
+
+    /* Sidebar - Nav */
+    .sidebar .nav__item {
+        font-size: var(--size-xl);
+    }
+
+    .sidebar .nav__link i {
+        font-size: calc(var(--size-lg) + .5vh);
+    }
+
+    /* Sidebar - Button */
+    .sidebar .btn i {
+        font-size: var(--size-2xl);
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+    .header {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: none;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 35%;
+        height: 100vh;
+        left: 0;
+    }
+
+    /* Sidebar - Profile */
+    .sidebar .profile__name {
+        font-size: calc(var(--size-4xl) + 1vh);
+        line-height: calc(var(--size-4xl) + .5vh);
+    }
+
+    /* Sidebar - Link */
+    .sidebar__link i {
+        font-size: calc(var(--size-lg) + 1vh);
+    }
+
+    /* Sidebar - Nav */
+    .sidebar .nav__item {
+        font-size: var(--size-xl);
+    }
+
+    .sidebar .nav__link i {
+        font-size: calc(var(--size-lg) + .5vh);
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+
+    /* Sidebar */
+    .sidebar {
+        --space-sm: var(--size-sm);
+        --space-md: var(--size-lg);
+        --space-lg: var(--size-xl);
+
+        width: calc(30% - var(--size-6xl));
+
+        left: var(--size-6xl);
+    }
+
+    /* Sidebar - Profile */
+    .sidebar .profile__img img {
+        width: calc(15vh + var(--size-lg));
+    }
+
+    .sidebar .profile__name {
+        font-size: calc(var(--size-2xl) + 2vh);
+        line-height: calc(var(--size-2xl) + 1vh);
+    }
+
+    .sidebar .profile__role {
+        font-size: calc(var(--size-xs) + 1vh);
+        height: calc(var(--size-xs) + 1vh);
+    }
+
+    /* Sidebar - Link */
+    .sidebar__link i {
+        font-size: calc(var(--size-xs) + 1.5vh);
+    }
+
+    /* Sidebar - Nav */
+    .sidebar .nav__item {
+        font-size: var(--size-lg);
+    }
+
+    .sidebar .nav__link i {
+        font-size: calc(var(--size-base) + .5vh);
+    }
+
+    /* Sidebar - Button */
+    .sidebar .btn {
+        font-size: var(--size-lg);
+    }
+
+    .sidebar .btn i {
+        font-size: var(--size-xl);
+    }
+}
+
+/* Desktop) */
+@media screen and (min-width: 1280px) {
+
+    /* Sidebar */
+    .sidebar {
+
+        width: calc(25% - var(--size-6xl));
+        left: var(--size-8xl);
+    }
+
+    /* Sidebar - Profile */
+    .sidebar .profile__img img {
+        width: calc(10vh + var(--size-5xl));
+    }
+
+    .sidebar .profile__name {
+        font-size: calc(var(--size-3xl) + 1vh);
+        line-height: calc(var(--size-3xl) + .5vh);
+
+        margin: var(--space-xs);
+    }
+
+    .sidebar .profile__role {
+        font-size: calc(var(--size-sm) + .5vh);
+        height: calc(var(--size-sm) + .3vh);
+    }
+
+    /* Sidebar - Link */
+    .sidebar__link i {
+        font-size: calc(var(--size-base) + 1vh);
+    }
+
+    /* Sidebar - Nav */
+    .sidebar .nav__item {
+        font-size: var(--size-base);
+
+        padding: var(--space-xs) calc(var(--space-lg) + 1vh);
+    }
+
+    .sidebar .nav__link i {
+        font-size: calc(var(--size-sm) + .5vh);
+    }
+
+    /* Sidebar - Button */
+    .sidebar .btn {
+        font-size: var(--size-base);
+
+        padding: calc(var(--space-xxs) + .5vh) calc(var(--space-md) + .5vh);
+    }
+}

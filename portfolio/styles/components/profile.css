@@ -1,0 +1,39 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__img img {
+    aspect-ratio: 1/1;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile__detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+.profile__first-name {
+    font-weight: 800;
+}
+
+.profile__last-name {
+    font-weight: 200;
+}
+
+.profile__role {
+    font-weight: 500;
+}

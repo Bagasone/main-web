@@ -1,0 +1,140 @@
+.card__container {
+    display: grid;
+}
+
+.card__item {
+    position: relative;
+}
+
+.card {
+    display: grid;
+    color: var(--color-text);
+    padding: var(--size-sm) var(--size-base);
+
+    box-shadow: var(--shadow-sm);
+
+    position: relative;
+}
+
+.card__head,
+.card__body,
+.card__foot {
+    display: flex;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: calc(var(--size-xl) + 10%);
+    margin: 0;
+}
+
+.card__desc {
+    font-weight: 200;
+    font-size: var(--size-sm);
+}
+
+.card__status {
+    font-weight: 500;
+    font-size: var(--size-sm);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: max-content;
+    width: max-content;
+
+    border: 1px solid;
+    padding: var(--space-xxs) var(--space-sm);
+}
+
+/* Mobile (Normal) */
+@media screen and (min-width: 478px) {
+    .card {
+        padding: var(--size-sm) var(--size-base);
+    }
+
+    .card__title {
+        font-size: calc(var(--size-2xl) + 10%);
+    }
+
+    .card__desc {
+        font-size: var(--size-base);
+    }
+
+    .card__status {
+        padding: var(--space-xs) var(--space-base);
+
+        font-size: var(--size-base);
+    }
+}
+
+/* Mobile (Large) */
+@media screen and (min-width: 578px) {
+    .card {
+        padding: var(--size-base) var(--size-lg);
+    }
+
+    .card__title {
+        font-size: calc(var(--size-3xl) + 10%);
+    }
+
+    .card__desc {
+        font-size: var(--size-lg);
+    }
+
+    .card__status {
+        padding: var(--space-xxs) var(--space-sm);
+
+        font-size: var(--size-lg);
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .card {
+        padding: var(--size-base) var(--size-lg);
+    }
+
+    .card__title {
+        font-size: calc(var(--size-3xl) + 10%);
+    }
+
+    .card__desc {
+        font-size: var(--size-lg);
+    }
+
+    .card__status {
+        padding: var(--space-xxs) var(--space-sm);
+
+        font-size: var(--size-base);
+    }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+    .card__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: var(--size-sm) var(--size-base);
+    }
+
+    .card__title {
+        font-size: calc(var(--size-2xl) + 10%);
+    }
+
+    .card__desc {
+        font-size: var(--size-base);
+    }
+
+    .card__status {
+        padding: var(--space-xxs) var(--space-sm);
+
+        font-size: var(--size-xm);
+    }
+}
+
+/* Desktop) */
+@media screen and (min-width: 1280px) {}
